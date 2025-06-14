@@ -1,0 +1,60 @@
+.projectssection{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    position: relative;
+     animation: fadeInUp 1s ease-out forwards;
+}
+.projectssection h1{
+    margin-top: 10%;
+    background-image: linear-gradient(to right,#62cff4,#2c67f2);
+    background-clip: text;
+    color: transparent;
+}
+iframe{
+     transform: scale(0.28);
+      transform-origin: top left;
+      width: 940px;
+      height: 100vh;
+      object-fit: contain;
+      border: none;
+      margin: auto;
+      margin-top: 4%;
+      border-radius: 10px;
+}
+.projectssection div{
+    width: 85%;
+    margin: auto;
+}
+.projectssection div div{
+    margin-top: 10%;
+    gap: 10px;
+}
+.projectssection div div div{
+    color: white;
+    width: 265px;
+    height: 400px;
+    border-radius: 10px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    margin: 0;
+}
+@media (orientation: portrait){
+    .projectssection div div{
+        flex-direction: column;
+    }
+}
+
+.projectssection div div div h6{
+    margin-top: -500px;
+    font-size: 16px;
+}
+.projectssection div div div p{
+    background-color: transparent;
+    font-size: 12px;
+    margin-bottom: 0;
+
+}
+.projectssection div div div p span{
+font-weight: bold;
+}

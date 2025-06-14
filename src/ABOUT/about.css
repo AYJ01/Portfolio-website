@@ -1,0 +1,44 @@
+.about-section{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    animation: fadeInUp 1s ease-out forwards;
+}
+.about-section div div{
+    margin-top: 10%;
+}
+#imgdiv img{
+    height: 60vh;
+    width: 60%;
+    margin: auto;
+    margin-top: 20%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.7s ease-in-out;
+}
+
+#text-div{
+padding: 12%;
+}
+#text-div p{
+    text-align: justify;
+    font-size: 14px;
+}
+#text-div h1{
+    font-size: 32px;
+    width: fit-content;
+    background-image: linear-gradient(to right,#62cff4,#2c67f2);
+    background-clip: text;
+    color: transparent;
+}
+
+#imgdiv{
+text-align: center;
+margin: 0;
+margin-bottom: 10%;
+}
+
+#imgdiv img:hover{
+    transform: scale(0.95);
+    box-shadow: 0 0 30px #62cff482;
+}
