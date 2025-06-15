@@ -14,7 +14,8 @@
     .carousel {
       position: relative;
       width: 100%;
-      left:-10px;
+      height:100vh;
+      right:30%;
       margin: auto;
       top: 10vh;
       transform-style: preserve-3d;
