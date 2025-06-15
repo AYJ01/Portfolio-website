@@ -39,7 +39,7 @@ iframe{
     -webkit-backdrop-filter: blur(14px);
     margin: 0;
 }
-@media (orientation: portrait){
+@media (max-width: 768px){
     .projectssection div div{
         flex-direction: column;
     }
