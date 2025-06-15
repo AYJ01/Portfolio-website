@@ -179,7 +179,7 @@ p{
     color: transparent;
 }
 
-@media (orientation: portrait) {
+@media (max-width: 768px) {
     .skillheading{
         margin-top: 50%;
     }
