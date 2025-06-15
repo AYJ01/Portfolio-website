@@ -12,7 +12,7 @@
     }
 
     .carousel {
-      position: absolute;
+      position: relative;
       width: 100%;
       left:-10px;
       margin: auto;
