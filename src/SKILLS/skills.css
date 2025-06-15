@@ -1,11 +1,11 @@
-    .scene{
+    .scene {
       width: 100vw;
       height: 100vh;
       perspective: 1200px;
       text-align: center;
       justify-content: center;
       align-items: center;
-      touch-action:pan-y;
+      touch-action: none;
         margin: 0;
         overflow-y: hidden;
         animation: fadeInUp 1s ease-out forwards;
@@ -13,9 +13,10 @@
 
     .carousel {
       position: absolute;
-      width: 100%;
-      height: 100vh;
+      width: 0;
+      height: 0;
       margin: auto;
+      left: -2%;
       top: 170px;
       transform-style: preserve-3d;
     }
@@ -178,7 +179,7 @@ p{
     color: transparent;
 }
 
-@media (max-width: 768px) {
+@media (orientation: portrait) {
     .skillheading{
         margin-top: 50%;
     }
