@@ -1,6 +1,6 @@
     .scene {
       width: 100vw;
-      height: 100vh;
+      min-height: 100vh;
       perspective: 1200px;
       text-align: center;
       justify-content: center;
@@ -13,11 +13,9 @@
 
     .carousel {
       position: absolute;
-      width: 0;
-      height: 0;
+      width: 100%;
       margin: auto;
-      left: -2%;
-      top: 170px;
+      top: 10vh;
       transform-style: preserve-3d;
     }
 
