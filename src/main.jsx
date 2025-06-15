@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"  crossOrigin={"anonymous"}></link>
     <script src={"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"} integrity={"sha384-c0ySq6I2MlH5oqwZPxXrrqOd9GZSkXWvVwRCjaGQwN2fnDJY4Dh+G3nGLJrO5L1u"} crossOrigin={"anonymous"}></script>
-{/*     <Hero/> */}
+    <Hero/>
     <About/>
     <Skills/>
     <Projects/>
