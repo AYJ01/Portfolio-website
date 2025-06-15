@@ -5,7 +5,7 @@
       text-align: center;
       justify-content: center;
       align-items: center;
-      touch-action: none;
+      touch-action:pan-y;
         margin: 0;
         overflow-y: hidden;
         animation: fadeInUp 1s ease-out forwards;
