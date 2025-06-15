@@ -50,4 +50,7 @@
     .certificate{
         width: 300px;
     }
+    .certifyimage img{
+    width: 280px;
+}
 }
