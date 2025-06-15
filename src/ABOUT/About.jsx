@@ -14,7 +14,7 @@ export default function About(){
              libraries. This is just a quick intro — feel free to explore more!</p>
         </div>
         <div className="col-lg-6 col-md-6" id="imgdiv">
-        <img src={Profileimg} alt="Profile Image" />
+        <img src={Profileimg} loading="lazy" alt="Profile Image" />
         </div>
     </div>
     </section>
