@@ -7,7 +7,7 @@ export default function Experience(){
     <div >
         <div id="expcard" >
             <div  id="imgexp" >
-                <img src={lccImage} alt="LCC Image" />
+                <img src={lccImage} loading="lazy" alt="LCC Image" />
             </div>
             <div id="expdetails" className="p-3">
                 <h5>Lcc</h5>
