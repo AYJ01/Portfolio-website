@@ -48,6 +48,10 @@
         flex-direction: column;
         width: 320px;
     }
+    #expdetails{
+        width: 300px;
+        height: 200px;
+    }
 }
 #expdetails{
     text-align: left;
