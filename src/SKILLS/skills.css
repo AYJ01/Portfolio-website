@@ -1,6 +1,4 @@
-    .scene {
-      width: 100vw;
-      min-height: 100vh;
+    .scene{
       perspective: 1200px;
       text-align: center;
       justify-content: center;
