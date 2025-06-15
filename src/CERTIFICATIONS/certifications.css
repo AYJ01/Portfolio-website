@@ -43,8 +43,11 @@
     display: flex;
 }
 
-@media (orientation: portrait){
+@media (max-width: 768px){
     #certificates{
         display: block;
+    }
+    .certificate{
+        width: 300px;
     }
 }
