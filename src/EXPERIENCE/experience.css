@@ -40,7 +40,7 @@
     object-fit: cover;
     border: 10px solid white;
 }
-@media (orientation: portrait){
+@media (max-width: 768px){
     .experience-section{
         margin-top: 10%;
     }
