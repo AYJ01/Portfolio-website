@@ -6,6 +6,7 @@
 }
 .Education-section h1{
     font-size: 32px;
+    margin-top:40px;
     background-image: linear-gradient(to right,#62cff4,#2c67f2);
     background-clip: text;
     color: transparent;
