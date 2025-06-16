@@ -22,7 +22,7 @@ createRoot(document.getElementById('root')).render(
     <Experience/>
     <Education/>
     <Certifications/>
-    {/* <Contact/> */}
+{/*     <Contact/> */}
     <Footer/>
   </StrictMode>,
 )
