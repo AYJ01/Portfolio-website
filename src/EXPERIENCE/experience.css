@@ -50,10 +50,7 @@
         width: 300px;
     }
     #expdetails{
-        width: 280px;
-    }
-     #expdetails ul{
-       margin-left:-10px;
+        width: 80%;
     }
 }
 #expdetails{
