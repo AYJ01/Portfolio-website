@@ -1,57 +1,87 @@
-.projectssection{
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-    position: relative;
-     animation: fadeInUp 1s ease-out forwards;
-}
-.projectssection h1{
-    margin-top: 10%;
-    background-image: linear-gradient(to right,#62cff4,#2c67f2);
-    background-clip: text;
-    color: transparent;
+.projects-section {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  padding: 40px 20px;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
-.projectssection div{
-    width: 85%;
-    margin: auto;
-}
-.projectssection div div{
-    margin-top: 10%;
-    gap: 10px;
-}
-.projectssection div div div{
-    color: white;
-    width: 265px;
-    height: 400px;
-    border-radius: 10px;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    margin: 0;
-}
-@media (orientation: portrait){
-    .projectssection div div{
-        flex-direction: column;
-    }
+.projects-section h1 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  background-image: linear-gradient(to right, #62cff4, #2c67f2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.projectssection div div div h6{
-    font-size: 16px;
-    margin-top: 20px;
-}
-.projectssection div div div p{
-    background-color: transparent;
-    font-size: 12px;
-    margin-bottom: 0;
-
-}
-.projectssection div div div p span{
-font-weight: bold;
+.project-card {
+  width: 265px;
+  height: auto;
+  border-radius: 10px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 15px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.projectimg{
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.project-card h6 {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.project-card p {
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.project-card p span {
+  font-weight: bold;
+}
+
+.project-desc {
+  font-size: 11px;
+  font-weight: normal;
+  text-align: justify;
+  width: 100%;
+  margin: 10px auto 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .projects-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .project-card {
     width: 90%;
-    height:fit-content;
-    object-fit: cover;
-    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Optional Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
