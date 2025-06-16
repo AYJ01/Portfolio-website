@@ -1,60 +1,117 @@
-.projectssection{
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-    position: relative;
-     animation: fadeInUp 1s ease-out forwards;
-}
-.projectssection h1{
-    margin-top: 10%;
-    background-image: linear-gradient(to right,#62cff4,#2c67f2);
-    background-clip: text;
-    color: transparent;
-}
-iframe{
-     transform: scale(0.28);
-      transform-origin: top left;
-      width: 940px;
-      height: 100vh;
-      object-fit: contain;
-      border: none;
-      margin: auto;
-      margin-top: 4%;
-      border-radius: 10px;
-}
-.projectssection div{
-    width: 85%;
-    margin: auto;
-}
-.projectssection div div{
-    margin-top: 10%;
-    gap: 10px;
-}
-.projectssection div div div{
-    color: white;
-    width: 265px;
-    height: 400px;
-    border-radius: 10px;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    margin: auto;
-}
-@media (max-width: 768px){
-    .projectssection div div{
-        flex-direction: column;
-    }
+.projectssection {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Clip any overflow */
+  animation: fadeInUp 1s ease-out forwards;
+  box-sizing: border-box; /* Ensure padding/margins don’t cause overflow */
 }
 
-.projectssection div div div h6{
-    margin-top: -500px;
-    font-size: 16px;
+.projectssection h1 {
+  margin-top: 5%; /* Reduced for mobile */
+  font-size: clamp(24px, 5vw, 32px); /* Responsive font */
+  background-image: linear-gradient(to right, #62cff4, #2c67f2);
+  -webkit-background-clip: text; /* Safari support */
+  background-clip: text;
+  color: transparent;
 }
-.projectssection div div div p{
-    background-color: transparent;
-    font-size: 12px;
-    margin-bottom: 0;
 
+iframe {
+  width: clamp(300px, 90vw, 800px); /* Scale with viewport */
+  height: clamp(200px, 50vh, 600px); /* Responsive height */
+  border: none;
+  margin: 4% auto; /* Centered */
+  border-radius: 10px;
+  display: block; /* Prevent margin issues */
+  object-fit: contain; /* Maintain aspect ratio */
 }
-.projectssection div div div p span{
-font-weight: bold;
+
+.projectssection div {
+  width: clamp(280px, 90%, 1200px); /* Constrain container */
+  margin: auto;
+}
+
+.projectssection div div {
+  margin-top: 5%; /* Reduced for mobile */
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap */
+  gap: 10px;
+  justify-content: center; /* Center cards */
+}
+
+.projectssection div div div {
+  color: white;
+  width: clamp(200px, 30vw, 265px); /* Responsive card width */
+  height: auto;
+  min-height: 300px; /* Flexible height */
+  border-radius: 10px;
+  background: rgba(87, 86, 86, 0.369); /* Match Certifications for consistency */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.5),
+              inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+  margin: 0; /* Remove auto margin */
+  padding: 10px; /* Add padding for content */
+  overflow: hidden; /* Clip card content */
+}
+
+.projectssection div div div h6 {
+  margin-top: 10px; /* Fix negative margin */
+  font-size: clamp(14px, 2.5vw, 16px); /* Responsive */
+  font-weight: bold;
+}
+
+.projectssection div div div p {
+  background-color: transparent;
+  font-size: clamp(12px, 2vw, 14px); /* Readable */
+  margin-bottom: 0;
+  text-align: left; /* Consistent with other sections */
+}
+
+.projectssection div div div p span {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .projectssection {
+    padding: 5%; /* Add padding for mobile */
+  }
+  .projectssection h1 {
+    margin-top: 10%;
+  }
+  iframe {
+    width: 95vw;
+    height: clamp(150px, 30vh, 400px); /* Smaller for tablets */
+  }
+  .projectssection div div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projectssection div div div {
+    width: clamp(250px, 80vw, 300px); /* Wider for mobile readability */
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectssection h1 {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+  iframe {
+    width: 98vw;
+    height: clamp(120px, 25vh, 300px); /* Compact for small phones */
+  }
+  .projectssection div div div {
+    width: 90vw;
+    min-height: 200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projectssection {
+    animation: none; /* Respect user settings */
+  }
 }
