@@ -4,6 +4,7 @@
     animation: fadeInUp 1s ease-out forwards;
     border: 1px solid white;
    padding: 4%;
+    margin:auto;
 }
 
 .footer-section h1{
