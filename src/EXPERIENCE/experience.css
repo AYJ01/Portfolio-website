@@ -51,6 +51,9 @@
     #expdetails{
         width: 280px;
     }
+     #expdetails li{
+        width: 280px;
+    }
 }
 #expdetails{
     text-align: left;
