@@ -3,72 +3,72 @@
   height: fit-content;
   text-align: center;
   position: relative;
-  overflow: hidden; /* Clip any overflow */
+  overflow: hidden;
   animation: fadeInUp 1s ease-out forwards;
-  box-sizing: border-box; /* Ensure padding/margins don’t cause overflow */
+  box-sizing: border-box;
 }
 
 .projectssection h1 {
-  margin-top: 5%; /* Reduced for mobile */
-  font-size: clamp(24px, 5vw, 32px); /* Responsive font */
+  margin-top: 5%; 
+  font-size: clamp(24px, 5vw, 32px); 
   background-image: linear-gradient(to right, #62cff4, #2c67f2);
-  -webkit-background-clip: text; /* Safari support */
+  -webkit-background-clip: text; 
   background-clip: text;
   color: transparent;
 }
 
 iframe {
-  width: clamp(300px, 90vw, 800px); /* Scale with viewport */
-  height: clamp(200px, 50vh, 600px); /* Responsive height */
+  width: clamp(300px, 90vw, 800px); 
+  height: clamp(200px, 50vh, 600px);
   border: none;
-  margin: 4% auto; /* Centered */
+  margin: 4% auto; 
   border-radius: 10px;
-  display: block; /* Prevent margin issues */
-  object-fit: contain; /* Maintain aspect ratio */
+  display: block; 
+  object-fit: contain; 
 }
 
 .projectssection div {
-  width: clamp(280px, 90%, 1200px); /* Constrain container */
+  width: clamp(280px, 90%, 1200px); 
   margin: auto;
 }
 
 .projectssection div div {
-  margin-top: 5%; /* Reduced for mobile */
+  margin-top: 5%;
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap */
+  flex-wrap: wrap; 
   gap: 10px;
-  justify-content: center; /* Center cards */
+  justify-content: center; 
 }
 
 .projectssection div div div {
   color: white;
-  width: clamp(200px, 30vw, 265px); /* Responsive card width */
+  width: clamp(200px, 30vw, 265px);
   height: auto;
-  min-height: 300px; /* Flexible height */
+  min-height: 300px; 
   border-radius: 10px;
-  background: rgba(87, 86, 86, 0.369); /* Match Certifications for consistency */
+  background: rgba(87, 86, 86, 0.369); 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
               inset 0 1px 0 rgba(255, 255, 255, 0.5),
               inset 0 -1px 0 rgba(255, 255, 255, 0.1);
-  margin: 0; /* Remove auto margin */
-  padding: 10px; /* Add padding for content */
-  overflow: hidden; /* Clip card content */
+  margin: 0; 
+  padding: 10px; 
+  overflow: hidden; 
 }
 
 .projectssection div div div h6 {
-  margin-top: 10px; /* Fix negative margin */
-  font-size: clamp(14px, 2.5vw, 16px); /* Responsive */
+  margin-top: 10px; 
+  font-size: clamp(14px, 2.5vw, 16px); 
   font-weight: bold;
 }
 
 .projectssection div div div p {
   background-color: transparent;
-  font-size: clamp(12px, 2vw, 14px); /* Readable */
+  font-size: clamp(12px, 2vw, 14px); 
   margin-bottom: 0;
-  text-align: left; /* Consistent with other sections */
+  text-align: left; 
 }
 
 .projectssection div div div p span {
@@ -77,21 +77,21 @@ iframe {
 
 @media (max-width: 768px) {
   .projectssection {
-    padding: 5%; /* Add padding for mobile */
+    padding: 5%; 
   }
   .projectssection h1 {
     margin-top: 10%;
   }
   iframe {
     width: 95vw;
-    height: clamp(150px, 30vh, 400px); /* Smaller for tablets */
+    height: clamp(150px, 30vh, 400px);
   }
   .projectssection div div {
     flex-direction: column;
     align-items: center;
   }
   .projectssection div div div {
-    width: clamp(250px, 80vw, 300px); /* Wider for mobile readability */
+    width: clamp(250px, 80vw, 300px); 
     min-height: 250px;
   }
 }
@@ -102,7 +102,7 @@ iframe {
   }
   iframe {
     width: 98vw;
-    height: clamp(120px, 25vh, 300px); /* Compact for small phones */
+    height: clamp(120px, 25vh, 300px); 
   }
   .projectssection div div div {
     width: 90vw;
@@ -112,6 +112,6 @@ iframe {
 
 @media (prefers-reduced-motion: reduce) {
   .projectssection {
-    animation: none; /* Respect user settings */
+    animation: none; 
   }
 }
