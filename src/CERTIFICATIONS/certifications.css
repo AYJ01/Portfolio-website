@@ -49,6 +49,7 @@
     }
     .certificate{
         width: 300px;
+        padding: 0%;
     }
     .certifyimage img{
     width: 280px;
