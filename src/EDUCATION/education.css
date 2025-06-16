@@ -67,7 +67,7 @@
 
 @media (orientation: portrait){
     .institutioncard{
-        width: 320px;
+        width: 300px;
         height: fit-content;
     }
     
