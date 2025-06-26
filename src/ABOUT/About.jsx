@@ -1,5 +1,5 @@
 import "../ABOUT/about.css"
-import Profileimg from "../assets/henrycavil.jpg"
+import Profileimg from "../assets/ayjgif.gif"
 
 const aboutsection = document.getElementsByClassName("about-section");
 
