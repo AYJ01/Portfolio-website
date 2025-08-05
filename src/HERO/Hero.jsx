@@ -151,11 +151,12 @@ export default function Hero() {
   }, []);
   return (
     <section id="hero-section" className="">
-      <div>
-        <h1>STACK</h1>
-      <h1>DEVELOPER</h1>
-      <img src={Heroimg} className="Ai" alt="" />
-      <a className="explorebtn">Scroll to explore <img src={scrollGif} alt="scrollgif" /></a>
+      <div className="lg:pt-20 pt-10">
+      <h1 className="text-[14dvw] font-bold text-transparent z-1 text-center ">FULLSTACK</h1>
+      <h1 className="text-[14dvw] font-bold text-transparent z-1 text-center ">DEVELOPER</h1>
+      <img src={Heroimg} className="z-3 lg:w-100 w-60 mx-auto lg:-mt-140 md:-mt-90 Ai" alt="" />
+      <a className="text-xs text-sky-500 p-4 w-fit block opacity-50 mx-auto"
+      ><img className="w-14 mx-auto" src={scrollGif} alt="scrollgif" />Scroll to explore</a>
       </div>
       <canvas ref={canvasRef} id={"sky"} style={{position: "fixed",  top: 0,left: 0,width: "100vw",  height: "100vh", zIndex: -1,pointerEvents: "none"}}></canvas>
     </section>

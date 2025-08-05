@@ -1,17 +1,31 @@
+@import "tailwindcss";
 body{
-  color: white;
-  font-family: sans-serif;
-  background-color: black;
+  color: #DADADA;
+  background-color: #121212;
   overflow-x: hidden;
+  font-family: "Manrope", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0.7px;
+  word-spacing: 1px;
 }
-
+p{
+  line-height: 1.75;
+  letter-spacing: 0.7px;
+}
 @keyframes fadeInUp {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(60px);
+    filter: blur(6px);
   }
-  to {
+  60% {
+    opacity: 0.8;
+    filter: blur(2px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
+    filter: blur(0);
   }
 }
+

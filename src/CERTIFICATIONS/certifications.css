@@ -1,50 +1,38 @@
 .certifications-section{
     width: 100%;
     height: fit-content;
-    text-align: center;
-    padding: 7%;
-    color: white;
     animation: fadeInUp 1s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 4%;
     
 }
-.certifications-section div{
-    margin-top: 10%;
-}
+
 .certifications-section h1{
-    font-size: 32px;
     background-image: linear-gradient(to right,#62cff4,#2c67f2);
     background-clip: text;
-    color: transparent;
-    text-align: center;
-    
+    color: transparent;   
 }
+
+@keyframes slideToTop {
+  0% {
+    transform: translateY(200px);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .certificate{
-    padding: 2%;
-    margin: auto;
-    width: 350px;
-    height: 400px;
-    background: rgba(87, 86, 86, 0.369);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-}
-.certifyimage img{
-    width: 300px;
-    border-radius: 10px;
+    animation:slideToTop 0.5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 4%;
 }
 
-#certificates{
-    gap: 10px;
-    display: flex;
-}
-
-@media (orientation: portrait){
-    #certificates{
-        display: block;
-    }
+.certificate :hover{
+    transition: transform 0.5s ease-in-out;
+   transform: scale(1.04);
 }

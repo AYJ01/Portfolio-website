@@ -1,189 +1,44 @@
     .scene {
-      width: 100vw;
-      height: 100vh;
-      perspective: 1200px;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      touch-action: none;
-        margin: 0;
-        overflow-y: hidden;
         animation: fadeInUp 1s ease-out forwards;
+        animation-timeline: view();
+        animation-range: entry 0 cover 10%;
     }
 
-    .carousel {
-      position: absolute;
-      width: 0;
-      height: 0;
-      margin: auto;
-      left: -2%;
-      top: 170px;
-      transform-style: preserve-3d;
-    }
-
-    .item {
-      position: absolute;
-      width: 80px;
-      height: 120px;
-      color: white;
-      text-align: center;
-      background-color: transparent;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      font-size: 14px;
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      transform-style: preserve-3d;
-
-    }
-
-    .carousel> :nth-child(1){
-        background-color: #FFC107;
-        box-shadow: 0 0 15px rgba(177, 157, 44, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(2){
-        background-color: #117340;
-        box-shadow: 0 0 15px rgba(162, 255, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(3){
-        background-color: #FF6D00;
-        box-shadow: 0 0 15px rgba(255, 174, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(4){
-        background-color: #039BE5;
-        box-shadow: 0 0 15px rgba(0, 157, 255, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(5){
-        background-color: #FFD600;
-        box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(6){
-        background-color: #5D4037;
-        box-shadow: 0 0 15px rgba(255, 123, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(7){
-        background-color: #2E7D32;
-        box-shadow: 0 0 15px rgba(11, 155, 1, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(8){
-        background-color: #7C4DFF;
-        box-shadow: 0 0 15px rgba(86, 1, 155, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(9){
-        background-color: #4E7AB5;
-        box-shadow: 0 0 15px rgba(1, 122, 155, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(10){
-        background-color: #9EC6F3;
-        box-shadow: 0 0 15px rgba(1, 137, 155, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(11){
-        background-color: #7C4DFF;
-        box-shadow: 0 0 15px rgba(81, 1, 155, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel> :nth-child(12){
-        background-color: #C43333;
-        box-shadow: 0 0 15px rgba(155, 1, 1, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .carousel> :nth-child(1):hover{
-        box-shadow: 0 0 25px rgba(255, 217, 0, 0.5);
-    }
-    .carousel> :nth-child(2):hover{
-        box-shadow: 0 0 25px rgba(67, 255, 54, 0.5);
-    }
-    .carousel> :nth-child(3):hover{
-        box-shadow: 0 0 25px #ff6f007a;
-    }
-    .carousel> :nth-child(4):hover{
-        box-shadow: 0 0 25px #039ae582;
-    }
-    .carousel> :nth-child(5):hover{
-        box-shadow: 0 0 25px #ffd50083;
-    }
-    .carousel> :nth-child(6):hover{
-        box-shadow: 0 0 25px #5d4037ba;
-    }
-    .carousel> :nth-child(7):hover{
-        box-shadow: 0 0 25px #2e7d3288;
-    }
-    .carousel> :nth-child(8):hover{
-        box-shadow: 0 0 25px #7c4dff92;
-    }
-    .carousel> :nth-child(9):hover{
-        box-shadow: 0 0 25px #4e7bb59c;
-    }
-    .carousel> :nth-child(10):hover{
-        box-shadow: 0 0 25px #9ec6f382;
-    }
-    .carousel> :nth-child(11):hover{
-        box-shadow: 0 0 25px #7c4dff85;
-    }
-    .carousel> :nth-child(12):hover{
-        box-shadow: 0 0 25px #c4333380;
-    }
-
-    .item:hover {
-      transform: scale(1.2) translateZ(350px) !important;
-      
-      z-index: 10;
-    }
-
-.item img{
-    width: 60%;
-    margin-top: 20%;
-}
-
-.item h6{
-    color: black;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.progressbar{
-    background-color:black ;
-    height: 4px;
-    width: 80%;
-    margin: auto;
-    border-radius: 100px;
-}
-p{
-    font-size: 8px;
-    font-weight: 500;
-    padding: 2%;
-    border-radius: 4px;
-    background-color: black;
-}
-.progressbar div{
-    border-radius: 100px;
-}
-
-.skillheading{
-    font-size: 32px;
-    margin-top: 7%;
+    .skillheading{
     background-image: linear-gradient(to right,#62cff4,#2c67f2);
     background-clip: text;
     color: transparent;
 }
 
-@media (orientation: portrait) {
-    .skillheading{
-        margin-top: 50%;
-    }
-    .carousel{
-        top: 100px;
-    }
+@keyframes slideToRight {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1;
+  }
+}
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1;
+  }
+}
+
+div[data-side="right"]{
+    animation:slideToRight 0.5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+div[data-side="left"]{
+    animation:slideToLeft 0.5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }

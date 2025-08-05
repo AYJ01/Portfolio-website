@@ -1,224 +1,167 @@
 import { useEffect, useRef } from "react";
 import "../SKILLS/skills.css";
-import python from "/src/assets/python.png"
-import django from "/src/assets/django.png"
-import html from "/src/assets/html.png"
-import css from "/src/assets/css.png"
-import javascript from "/src/assets/javascript.png"
-import mongodb from "/src/assets/mongodb.png"
-import node from "/src/assets/node.png"
-import bootstrap from "/src/assets/bootstrap.png"
-import react from "/src/assets/react.png"
-import mysql from "/src/assets/mysql.png"
-import figma from "/src/assets/figma.png"
-import seo from "/src/assets/seo.png"
+import python from "/src/assets/python.png";
+import django from "/src/assets/django.png";
+import html from "/src/assets/html.png";
+import css from "/src/assets/css.png";
+import javascript from "/src/assets/javascript.png";
+import mongodb from "/src/assets/mongodb.png";
+import node from "/src/assets/node.png";
+import bootstrap from "/src/assets/bootstrap.png";
+import react from "/src/assets/react.png";
+import mysql from "/src/assets/mysql.png";
+import figma from "/src/assets/figma.png";
+import seo from "/src/assets/seo.png";
+import tailwind from "/src/assets/tailwind.png";
+import git from "/src/assets/Git.png";
+import github from "/src/assets/github.png";
+import postgres from "/src/assets/PostgresSQL.png";
+import api from "/src/assets/api.png";
 
 export default function Skills() {
-  const sceneRef = useRef(null);
-  const carouselRef = useRef(null);
 
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    const totalCards = 12;
-    let angle = 0;
-    const cards = carousel.querySelectorAll(".item");
-
-    const positionCards = () => {
-      const radius = 300;
-      cards.forEach((card, index) => {
-        const theta = ((360 / totalCards) * index + angle) * Math.PI / 180;
-        const x = Math.sin(theta) * radius;
-        const z = Math.cos(theta) * radius;
-
-        card.style.transform = `translateX(${x}px) translateZ(${z}px) rotateY(${(360 / totalCards) * index + angle}deg)`;
-      });
-    };
-
-    // Auto rotation
-    let autoRotate = setInterval(() => {
-      angle += 0.1;
-      positionCards();
-    }, 30);
-
-    // Drag logic
-    let isDragging = false;
-    let startX = 0;
-
-    const startDrag = (x) => {
-      clearInterval(autoRotate);
-      isDragging = true;
-      startX = x;
-    };
-
-    const duringDrag = (x) => {
-      if (!isDragging) return;
-      const dx = x - startX;
-      startX = x;
-      angle += dx * 0.3;
-      positionCards();
-    };
-
-    const endDrag = () => {
-      isDragging = false;
-      autoRotate = setInterval(() => {
-        angle += 0.1;
-        positionCards();
-      }, 30);
-    };
-
-    // Event listeners
-    const handleMouseDown = (e) => startDrag(e.clientX);
-    const handleMouseMove = (e) => duringDrag(e.clientX);
-    const handleMouseUp = endDrag;
-
-    const handleTouchStart = (e) => startDrag(e.touches[0].clientX);
-    const handleTouchMove = (e) => duringDrag(e.touches[0].clientX);
-    const handleTouchEnd = endDrag;
-
-    const handleWheel = (e) => {
-  const bounds = sceneRef.current.getBoundingClientRect();
-
-  // Only rotate if mouse is within scene
-  if (e.clientY >= bounds.top && e.clientY <= bounds.bottom) {
-    // Optional: Allow scroll-through if the section is not full-screen
-    if (bounds.height >= window.innerHeight * 0.8) {
-      e.preventDefault();
-    }
-    angle += e.deltaY * 0.1;
-    positionCards();
-  }
-};
-
-
-
-
-    document.addEventListener("mousedown", handleMouseDown);
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
-
-    document.addEventListener("touchstart", handleTouchStart);
-    document.addEventListener("touchmove", handleTouchMove);
-    document.addEventListener("touchend", handleTouchEnd);
-
-
-
-    positionCards();
-
-    // Cleanup on unmount
-    return () => {
-      clearInterval(autoRotate);
-      document.removeEventListener("mousedown", handleMouseDown);
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
-      document.removeEventListener("touchstart", handleTouchStart);
-      document.removeEventListener("touchmove", handleTouchMove);
-      document.removeEventListener("touchend", handleTouchEnd);
-      
-    };
-  }, []);
 
   return (<>
-    <div className="scene" id="scene" ref={sceneRef}>
-        <h1 className="skillheading">TOP TECHNICAL SKILLS</h1>
-      <div className="carousel" id="carousel" ref={carouselRef}>
-        <div className="item">
-        <img src={python} alt="python image" />
-        <h6>Python</h6>
-        <div className="progressbar">
-            <div className="h-100" style={{width:"95%",backgroundColor:"#C19000"}}></div>
-            <p className="mt-1" style={{ color:"#FEC260"}}>Advanced</p>
+    <div className="scene w-screen h-fit" id="scene" >
+        <h1 className="text-4xl text-center mt-50 skillheading">TOP TECHNICAL SKILLS</h1>
+    <div className="mt-20 w-screen lg:w-fit md:w-fit mx-auto p-1 ">
+      <div className="flex my-7  lg:w-fit w-[90%]" >
+        <div className="lg:w-100 md:w-100"></div>
+        <img src={python} className="w-20 mx-10 object-contain" alt="" />
+        <div className="w-100 bg-yellow-400 px-5 py-1 rounded-xl" data-side="right" >
+          <strong className="text-black text-normal font-[1000]">Python</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Proficient in Python with solid OOP and API skills. Integrated ML code into web apps for real-time predictions and data-driven user experiences.</p>
         </div>
-        </div>
-        <div className="item">
-        <img src={django} alt="django image" />
-        <h6>Django</h6>
-        <div className="progressbar">
-            <div className="h-100" style={{width:"95%",backgroundColor:"#346751"}}></div>
-            <p className="mt-1" style={{ color:"#117340"}}>Advanced</p>
-        </div>
-        </div>
-        <div className="item">
-        <img src={html} alt="HTML image" />
-        <h6>HTML</h6>
-        <div className="progressbar">
-            <div className="h-100" style={{width:"95%",backgroundColor:"#C62300"}}></div>
-            <p className="mt-1" style={{ color:"#FF6D00"}}>Advanced</p>
-        </div>
-        </div>
-        <div className="item">
-        <img src={css} alt="CSS image" />
-        <h6>CSS</h6>
-        <div className="progressbar">
-            <div className="h-100" style={{width:"95%",backgroundColor:"#03346E"}}></div>
-            <p className="mt-1" style={{ color:"#039BE5"}}>Advanced</p>
-        </div>
-        </div>
-        <div className="item">
-        <img src={javascript} alt="javascript image" />
-        <h6>Javascript</h6>
-        <div className="progressbar">
-            <div className="h-100" style={{width:"95%",backgroundColor:"#DCA06D"}}></div>
-            <p className="mt-1" style={{ color:"#FFD600"}}>Advanced</p>
-        </div>
-        </div>
-        <div className="item">
-        <img src={mongodb} alt="mongodb image" />
-        <h6>Mongodb</h6>
-        <div className="progressbar">
-            <div className="h-100" style={{width:"50%",backgroundColor:"#481E14"}}></div>
-            <p className="mt-1" style={{ color:"#5D4037"}}>Intermediate</p>
-        </div>
-        </div>
-        <div className="item">
-        <img src={node} alt="node image" />
-        <h6>Node.js</h6>
-        <div className="progressbar">
-            <div className="h-100" style={{width:"50%",backgroundColor:"#3F4F44"}}></div>
-            <p className="mt-1" style={{ color:"#2E7D32"}}>Intermediate</p>
-        </div>
-        </div>
-        <div className="item">
-        <img src={bootstrap} alt="bootstrap image" />
-        <h6>Bootstrap</h6>
-        <div className="progressbar">
-            <div className="h-100" style={{width:"90%",backgroundColor:"#500073"}}></div>
-            <p className="mt-1" style={{ color:"#7C4DFF"}}>Advanced</p>
-        </div>
-        </div>
-        <div className="item">
-        <img src={react} alt="react image" />
-        <h6>React.js</h6>
-        <div className="progressbar">
-            <div className="h-100" style={{width:"80%",backgroundColor:"#1E3E62"}}></div>   
-            <p className="mt-1" style={{ color:"#4E7AB5"}}>Proficient</p>
-        </div>
-        </div>
-        <div className="item">
-        <img src={mysql} alt="mysql image" />
-        <h6>Mysql</h6>
-        <div className="progressbar">
-            <div className="h-100" style={{width:"90%",backgroundColor:"#03346E"}}></div>   
-            <p className="mt-1" style={{ color:"#9EC6F3"}}>Advanced</p>
-        </div>
-        </div>
-        <div className="item">
-        <img src={figma} alt="figma image" />
-        <h6>Figma</h6>  
-        <div className="progressbar">
-            <div className="h-100" style={{width:"50%",backgroundColor:"#2E073F"}}></div>   
-            <p className="mt-1" style={{ color:"#7C4DFF"}}>Intermediate</p>
-        </div>
-        </div>
-        <div className="item">
-        <img src={seo} alt="seo image" />
-        <h6>SEO</h6>  
-        <div className="progressbar">
-            <div className="h-100" style={{width:"80%",backgroundColor:"#901E3E"}}></div>   
-            <p className="mt-1" style={{ color:"#C43333"}}>Proficient</p>
-        </div>
-        </div>
-        
       </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="w-100 bg-green-600 px-5 py-1 rounded-xl" data-side="left">
+          <strong className="text-black text-normal font-[1000]">Django</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Built and deployed over 40 Django apps with REST APIs, admin customization, user auth, and ORM, ensuring scalable and secure backend functionality.</p>
+        </div>
+        <img src={django} className="w-20 mx-10 object-contain" alt="" />
+        <div className="lg:w-100 md:w-100"></div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="lg:w-100 md:w-100"></div>
+        <img src={node} className="w-20 mx-10 object-contain" alt="" />
+        <div className="w-100 bg-green-800 px-5 py-1 rounded-xl" data-side="right">
+          <strong className="text-black text-normal font-[1000]">Node.js</strong>
+          <p className="text-black text-xs font-bold">Intermediate | Self Learned | &#9733;&#9733;&#9733;&#9733;&#9734; </p>
+          <p className="text-black text-[11px]">Self-learned Node.js developer with hands-on experience building APIs, handling async logic, and creating backend services with Express and MongoDB.</p>
+        </div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="w-100 bg-orange-500 px-5 py-1 rounded-xl" data-side="left">
+          <strong className="text-black text-normal font-[1000]">HTML</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Strong grasp of semantic HTML5, accessibility, and structure. Built 40+ responsive UIs with clean markup, optimized layout, and SEO-friendly tags.</p>
+        </div>
+        <img src={html} className="w-20 mx-10 object-contain" alt="" />
+        <div className="lg:w-100 md:w-100"></div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="lg:w-100 md:w-100"></div>
+        <img src={css} className="w-20 mx-10 object-contain" alt="" />
+        <div className="w-100 bg-sky-600 px-5 py-1 rounded-xl" data-side="right">
+          <strong className="text-black text-normal font-[1000]">CSS</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Styled 40+ projects with modern CSS, mastering Flexbox, Grid, transitions, and responsive design to create clean, adaptive, and polished UIs.</p>
+        </div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="w-100 bg-yellow-400 px-5 py-1 rounded-xl" data-side="left">
+          <strong className="text-black text-normal font-[1000]">Javascript</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Solid understanding of core JavaScript—ES6+, DOM, events, and async patterns. Built 40+ dynamic UIs with clean, modular, and interactive logic.</p>
+        </div>
+        <img src={javascript} className="w-20 mx-10 object-contain" alt="" />
+        <div className="lg:w-100 md:w-100"></div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="lg:w-100 md:w-100"></div>
+        <img src={react} className="w-20 mx-10 object-contain" alt="" />
+        <div className="w-100 bg-sky-400 px-5 py-1 rounded-xl" data-side="right">
+          <strong className="text-black text-normal font-[1000]">React</strong>
+          <p className="text-black text-xs font-bold">Proficient | Self Learned | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Skilled in React with hands-on experience building reusable components, managing state with hooks, and creating dynamic, responsive single-page apps.</p>
+        </div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="w-100 bg-purple-800 px-5 py-1 rounded-xl" data-side="left">
+          <strong className="text-black text-normal font-[1000]">Bootstrap</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Proficient in Bootstrap for building responsive, mobile-first UIs. Used grid, components, and utilities to rapidly develop clean, consistent layouts.</p>
+        </div>
+        <img src={bootstrap} className="w-20 mx-10 object-contain" alt="" />
+        <div className="lg:w-100 md:w-100"></div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="lg:w-100 md:w-100"></div>
+        <img src={tailwind} className="w-20 mx-10 object-contain" alt="" />
+        <div className="w-100 bg-sky-400 px-5 py-1 rounded-xl" data-side="right">
+          <strong className="text-black text-normal font-[1000]">Tailwind CSS</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Experienced in using Tailwind CSS to craft modern, responsive designs with utility classes, ensuring consistency, scalability, and rapid UI development.</p>
+        </div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="w-100 bg-sky-800 px-5 py-1 rounded-xl" data-side="left">
+          <strong className="text-black text-normal font-[1000]" >MySQL</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Experienced in MySQL with strong understanding of relational databases, complex queries, joins, indexing, and backend integration for data handling.</p>
+        </div>
+        <img src={mysql} className="w-20 mx-10 object-contain" alt="" />
+        <div className="lg:w-100 md:w-100"></div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="lg:w-100 md:w-100"></div>
+        <img src={mongodb} className="w-20 mx-10 object-contain" alt="" />
+        <div className="w-100 bg-green-700 px-5 py-1 rounded-xl" data-side="right">
+          <strong className="text-black text-normal font-[1000]">Mongodb</strong>
+          <p className="text-black text-xs font-bold">Intermediate | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Skilled in MongoDB with hands-on experience in schema design, CRUD operations, aggregation pipelines, and integrating with Node.js backends.</p>
+        </div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="w-100 bg-sky-400 px-5 py-1 rounded-xl" data-side="left">
+          <strong className="text-black text-normal font-[1000]">PostgresSQL</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Experienced in PostgreSQL with strong skills in schema design, complex joins, indexing, and integrating with Django and REST APIs for robust data handling.</p>
+        </div>
+        <img src={postgres} className="w-20 mx-10 object-contain" alt="" />
+        <div className="lg:w-100 md:w-100"></div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="lg:w-100 md:w-100"></div>
+        <img src={git} className="w-20 mx-10 object-contain" alt="" />
+        <div className="w-100 bg-red-700 px-5 py-1 rounded-xl" data-side="right">
+          <strong className="text-black text-normal font-[1000]">Git</strong>
+          <p className="text-black text-xs font-bold">Intermediate | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Proficient in Git for version control, branching, merging, and collaborative workflows. Used in all projects to maintain clean, trackable development history.</p>
+        </div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="w-100 bg-gray-400 px-5 py-1 rounded-xl" data-side="left">
+          <strong className="text-black text-normal font-[1000]">Github</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Used GitHub extensively for source control, project management, and collaboration—handling commits, pull requests, and repository organization efficiently.</p>
+        </div>
+        <img src={github} className="w-20 mx-10 object-contain" alt="" />
+        <div className="lg:w-100 md:w-100"></div>
+      </div>
+      <div className="flex my-7  lg:w-fit w-[90%]">
+        <div className="lg:w-100 md:w-100"></div>
+        <img src={seo} className="w-20 mx-10 object-contain" alt="" />
+        <div className="w-100 bg-red-600 px-5 py-1 rounded-xl" data-side="right">
+          <strong className="text-black text-normal font-[1000]">Search Engine Optimization</strong>
+          <p className="text-black text-xs font-bold">Proficient | Experinced | &#9733;&#9733;&#9733;&#9733;&#9733; </p>
+          <p className="text-black text-[11px]">Knowledgeable in SEO best practices, including semantic HTML, meta tags, sitemap setup, and performance optimization to improve site visibility and ranking.</p>
+        </div>
+      </div>
+      
+    </div>
     </div>
     </>
   );

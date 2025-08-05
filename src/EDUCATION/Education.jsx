@@ -4,39 +4,56 @@ import hssImg from "/src/assets/hss.png"
 export default function Education(){
     return <>
     <section className="Education-section">
-    <h1>Education</h1>
-    <div>
-        <div className="institutioncard" style={{background: "rgba(118, 172, 220, 0.2)"}}>
-            <div>
-                <img src={collegeImg} alt="" />
+    <h1 className="text-4xl text-center mt-50">Education</h1>
+    <div className="lg:ml-80 md:ml-40 ml-20 border-l-4 border-sky-500">
+        <div id="educationInst" className="flex mt-40 p-4" >
+            <div className="-ml-20">
+                <img className="min-w-30 max-w-30 rounded-full" src={collegeImg} alt="" />
             </div>
-            <div className="mx-5">
-                <h4>Diploma in Computer Engineering</h4>
-                <i>June 2020 - April 2023</i>
-                <span>Government polytechnic college, Kalamassery </span>
-                <span style={{fontWeight:"bold"}}>CGPA : 7.6 </span>
+            <div className="ml-4">
+                <h4 className="font-bold text-xl">Diploma in Computer Engineering</h4>
+                <h6 className="font-bold text-lg">Government polytechnic college, Kalamassery </h6>
+                <p className="font-semibold">June 2020 - April 2023</p>
+                <p className="font-bold">CGPA : 7.6 </p>
+                <div>
+                    <ul className="list-disc pl-4 text-sm">
+                        <li>Gained strong experience in teamwork, especially during group projects and event coordination.</li>
+                        <li>Improved significantly in public speaking, presentations, and technical communication.</li>
+                        <li>Took leadership roles in multiple team-based academic and extracurricular activities.</li>
+                        <li>Successfully coordinated a college trip, managing logistics and collaboration across teams.</li>
+                        <li>Built a solid foundation in Data Structures & Algorithms, Java, and Android SDK.</li>
+                        <li>Developed a full-stack capstone project: MyStockyApp, a stock forecast and visualization tool.</li>
+                        <li>Overall, it was a wonderful and transformative experience that helped shape both my technical and interpersonal skills.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div className="institutioncard" style={{marginTop:"10px",background: "rgba(179, 118, 220, 0.2)"}}>
-            <div>
-                <img src={hssImg} alt="" />
+        <div id="educationInst" className="flex mt-10 p-4" >
+            <div className="-ml-20">
+                <img className="min-w-30 max-w-30 rounded-full" src={hssImg} alt="" />
             </div>
-            <div className="mx-5">
-                <h4>Computer Science</h4>
-                <i>June 2018 - March 2020</i>
-                <span>Government HSS, North paravur </span>
-                <span style={{fontWeight:"bold"}}>Percentage : 74% </span>
+            <div className="ml-4">
+                <h4 className="font-bold text-xl">Computer Science, Higher Secondary</h4>
+                <h6 className="font-bold text-lg">Government higher secondary school, North paravur </h6>
+                <p className="font-semibold">June 2018 - March 2020</p>
+                <p className="font-bold">Percentage : 74%</p>
+                <div>
+                    <ul className="list-disc pl-4 text-sm">
+                        <li>Learned core programming concepts using C++, including object-oriented principles and logic building.</li>
+                        <li>Gained hands-on experience with MySQL for basic database operations and query writing.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div className="institutioncard" style={{marginTop:"10px",background: "rgba(118, 220, 215, 0.2)"}}>
-            <div>
-                <img src={hssImg} alt="" />
+        <div id="educationInst" className="flex mt-10 p-4" >
+            <div className="-ml-20">
+                <img className="min-w-30 max-w-30 rounded-full" src={hssImg} alt="" />
             </div>
-            <div className="mx-5">
-                <h4>10th SSLC</h4>
-                <i>2017-2018</i>
-                <span>St. Aloysius high school, North paravur</span>
-                <span style={{fontWeight:"bold"}}>Percentage : 98% </span>
+            <div className="ml-4">
+                <h4 className="font-bold text-xl">High school</h4>
+                <h6 className="font-bold text-lg">St Aloysius high school, North Paravur</h6>
+                <p className="font-semibold">June 2017 - March 2018</p>
+                <p className="font-bold">Percentage : 98%</p>
             </div>
         </div>
     </div>

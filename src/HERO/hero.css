@@ -3,17 +3,11 @@
 50% {transform: translateY(14px);}
 100% {transform: translateY(0px);}
 }
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
-#hero-section div h1{
-    font-size:15dvw;
-    text-align: center;
-    font-weight: bold;
-    color: transparent;
-    z-index: 1;
-    
-}
+
 #hero-section div{
-    padding: 10%;
+   
     background-image: linear-gradient(to right,#62cff4,#2c67f2);
     background-clip: text;
     animation: fadeInUp 1s ease-out forwards;
@@ -27,44 +21,10 @@
 }
 
 #hero-section div .Ai{
-    width: 34%;
-    z-index: 3;
-    margin-top: -46%;
-    margin-left: 34%;
     animation: aifloat 3s ease-in-out infinite;
     transition: all ease-in-out 0.7s;
 }
 #hero-section div .Ai:hover{
     scale: 1.11;
 }
-@media (orientation: portrait) {
-    #hero-section div:nth-child(1){
-        margin-top: 50%;
-    }
-}
 
-.explorebtn{
-    font-size: 1.6dvh;
-    padding-left: 12px;
-    border-radius: 10px;
-    text-decoration: none;
-    margin: auto;
-    color: #62cff4;
-    margin-top: auto;
-    width: fit-content;
-    display: block;
-    opacity: 0.7;
-    border: 1px solid #62cff4;
-    margin-top: 1%;
-}
-@media (orientation: portrait) {
-.explorebtn{
-    margin-top: 50%;
-}
-}
-
-.explorebtn img{
-    width: 40px;
-    height: fit-content;
-    opacity: 0.7;
-}
